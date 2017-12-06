@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LQQSegmentBar_Example' do
+  pod 'LQQSegmentBar', :path => '../'
+
+  target 'LQQSegmentBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
