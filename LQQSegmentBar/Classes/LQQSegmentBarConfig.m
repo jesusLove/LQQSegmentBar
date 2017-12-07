@@ -10,13 +10,7 @@
 
 @interface LQQSegmentBarConfig ()
 
-@property (nonatomic, strong) UIColor *segmentBarBackgroundColor;
-@property (nonatomic, strong) UIColor *itemNormalColor;
-@property (nonatomic, strong) UIColor *itemSelectedColor;
-@property (nonatomic, strong) UIFont *font;
-@property (nonatomic, strong) UIColor *indColor;
-@property (nonatomic, assign) CGFloat indHeight;
-@property (nonatomic, assign) CGFloat indExtraW;
+
 @end
 
 @implementation LQQSegmentBarConfig

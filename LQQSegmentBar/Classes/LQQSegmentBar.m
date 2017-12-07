@@ -49,11 +49,11 @@
     }
     self.backgroundColor = self.config.segmentBarBackgroundColor;
     for (UIButton *btn in self.itemBtns) {
-        [btn setTitleColor:self.config.itemNormlColor forState:UIControlStateNormal];
+        [btn setTitleColor:self.config.itemNormalColor forState:UIControlStateNormal];
         [btn setTitleColor:self.config.itemSelectedColor forState:UIControlStateSelected];
-        btn.titleLabel.font = self.config.itemFont;
+        btn.titleLabel.font = self.config.font;
     }
-    self.indicatorView.backgroundColor = self.config.indicatorColor;
+    self.indicatorView.backgroundColor = self.config.indColor;
     [self setNeedsLayout];
     [self layoutIfNeeded];
 }
@@ -77,9 +77,9 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = self.itemBtns.count;
         [btn setTitle:item forState:UIControlStateNormal];
-        [btn setTitleColor:self.config.itemNormlColor forState:UIControlStateNormal];
+        [btn setTitleColor:self.config.itemNormalColor forState:UIControlStateNormal];
         [btn setTitleColor:self.config.itemSelectedColor forState:UIControlStateSelected];
-        btn.titleLabel.font = self.config.itemFont;
+        btn.titleLabel.font = self.config.font;
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDown];
         [self.contentView addSubview:btn];
         [self.itemBtns addObject:btn];
@@ -108,9 +108,9 @@
 }
 - (UIView *)indicatorView {
     if (!_indicatorView) {
-        CGFloat indicatorH = self.config.indicatorHeight;
+        CGFloat indicatorH = self.config.indHeight;
         UIView *indicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - indicatorH, 0, indicatorH)];
-        indicatorView.backgroundColor = self.config.indicatorColor;
+        indicatorView.backgroundColor = self.config.indColor;
         [self.contentView addSubview:indicatorView];
         _indicatorView = indicatorView;
     }
@@ -139,7 +139,7 @@
     _lastBtn = btn;
     
     [UIView animateWithDuration:0.1 animations:^{
-        self.indicatorView.width = btn.width + self.config.indicatorExtraW * 2;
+        self.indicatorView.width = btn.width + self.config.indExtraW * 2;
         self.indicatorView.centerX = btn.centerX;
     }];
     CGFloat scrollX = btn.centerX - self.contentView.width * 0.5;
@@ -183,9 +183,9 @@
         return;
     }
     UIButton *btn = self.itemBtns[self.selectIndex];
-    self.indicatorView.width = btn.width + self.config.indicatorExtraW * 2;
+    self.indicatorView.width = btn.width + self.config.indExtraW * 2;
     self.indicatorView.centerX = btn.centerX;
-    self.indicatorView.height = self.config.indicatorHeight;
+    self.indicatorView.height = self.config.indHeight;
     self.indicatorView.y = self.height - self.indicatorView.height;
     
 }
