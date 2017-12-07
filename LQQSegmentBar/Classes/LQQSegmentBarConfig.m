@@ -8,23 +8,34 @@
 
 #import "LQQSegmentBarConfig.h"
 
+@interface LQQSegmentBarConfig ()
+
+@property (nonatomic, strong) UIColor *segmentBarBackgroundColor;
+@property (nonatomic, strong) UIColor *itemNormalColor;
+@property (nonatomic, strong) UIColor *itemSelectedColor;
+@property (nonatomic, strong) UIFont *font;
+@property (nonatomic, strong) UIColor *indColor;
+@property (nonatomic, assign) CGFloat indHeight;
+@property (nonatomic, assign) CGFloat indExtraW;
+@end
+
 @implementation LQQSegmentBarConfig
 +(instancetype)defaultConfig {
     LQQSegmentBarConfig *config = [[LQQSegmentBarConfig alloc] init];
     config.segmentBarBackgroundColor = [UIColor clearColor];
-    config.itemFont = [UIFont systemFontOfSize:15];
-    config.itemNormlColor = [UIColor lightGrayColor];
+    config.font = [UIFont systemFontOfSize:15];
+    config.itemNormalColor = [UIColor lightGrayColor];
     config.itemSelectedColor = [UIColor redColor];
     
-    config.indicatorColor = [UIColor redColor];
-    config.indicatorHeight = 2;
-    config.indicatorExtraW = 10;
+    config.indColor = [UIColor redColor];
+    config.indHeight = 2;
+    config.indExtraW = 10;
     
     return  config;
 }
 - (LQQSegmentBarConfig *(^)(UIColor *))itemNC {
     return ^(UIColor *color) {
-        self.itemNormlColor = color;
+        self.itemNormalColor = color;
         return self;
     };
 }
@@ -34,10 +45,36 @@
         return self;
     };
 }
+
+- (LQQSegmentBarConfig *(^)(UIFont *))itemFont {
+    return ^(UIFont *font) {
+        self.font = font;
+        return  self;
+    };
+}
 - (LQQSegmentBarConfig *(^)(CGFloat))indicatorEW {
     return ^(CGFloat w) {
-        self.indicatorExtraW = w;
+        self.indExtraW = w;
         return self;
     };
 }
+- (LQQSegmentBarConfig *(^)(UIColor *))indicatorColor {
+    return ^(UIColor *color) {
+        self.indColor = color;
+        return self;
+    };
+}
+- (LQQSegmentBarConfig *(^)(CGFloat))indicatorHeight {
+    return ^(CGFloat h) {
+        self.indHeight = h;
+        return self;
+    };
+}
+- (LQQSegmentBarConfig *(^)(UIColor *))segmentBGColor {
+    return ^(UIColor *color) {
+        self.segmentBarBackgroundColor = color;
+        return self;
+    };
+}
+
 @end

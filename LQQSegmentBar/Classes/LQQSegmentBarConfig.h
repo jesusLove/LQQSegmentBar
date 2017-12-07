@@ -12,18 +12,16 @@
 
 + (instancetype)defaultConfig;
 
-@property (nonatomic, strong) UIColor *segmentBarBackgroundColor;
-@property (nonatomic, strong) UIColor *itemNormlColor;
-@property (nonatomic, strong) UIColor *itemSelectedColor;
-@property (nonatomic, strong) UIFont *itemFont;
-
-@property (nonatomic, strong) UIColor *indicatorColor;
-
-@property (nonatomic, assign) CGFloat indicatorHeight;
-@property (nonatomic, assign) CGFloat indicatorExtraW;
-
-@property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^itemNC)(UIColor *color );
+// 链式编程
+@property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^itemNC)(UIColor *color);
 @property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^itemSC)(UIColor *color);
+@property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^itemFont)(UIFont *font);
+
+@property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^indicatorColor)(UIColor *color);
+@property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^indicatorHeight)(CGFloat h);
 @property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^indicatorEW)(CGFloat w);
+
+@property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^segmentBGColor)(UIColor *color);
+
 
 @end

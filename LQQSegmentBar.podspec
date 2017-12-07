@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LQQSegmentBar'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'LQQSegmentBar 选项卡控件'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-LQQSegmentBar, 简单易用的选项卡控件
+LQQSegmentBar, 简单易用的选项卡控件, 链式设置属性。
                        DESC
 
   s.homepage         = 'https://gitee.com/QQL/LQQSegmentBar'
