@@ -1,0 +1,6 @@
+framework module LQQSegmentBar {
+  umbrella header "LQQSegmentBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
