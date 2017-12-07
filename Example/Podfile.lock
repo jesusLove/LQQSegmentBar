@@ -1,5 +1,5 @@
 PODS:
-  - LQQSegmentBar (0.1.0)
+  - LQQSegmentBar (0.2.0)
 
 DEPENDENCIES:
   - LQQSegmentBar (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LQQSegmentBar: 6ff21650d06075968d3194f103036f601196c8f0
+  LQQSegmentBar: b430cc7639f7935e32d588c8c57dccaf29e398b9
 
 PODFILE CHECKSUM: b3d8c4e80ba4163d7e2f86e08dfcb57d86e53df1
 
