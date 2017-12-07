@@ -150,7 +150,6 @@
         scrollX = self.contentView.contentSize.width - self.contentView.width;
     }
     [self.contentView setContentOffset:CGPointMake(scrollX, 0) animated:YES];
-    NSLog(@"%f", scrollX);
 }
 
 #pragma mark - 布局
