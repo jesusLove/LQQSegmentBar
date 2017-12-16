@@ -175,6 +175,7 @@
         btn.x = lastX;
         
         lastX += btn.width + caculateMargin;
+        btn.height = self.height;
     }
     self.contentView.contentSize = CGSizeMake(lastX, 0);
     

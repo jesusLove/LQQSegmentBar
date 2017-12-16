@@ -12,14 +12,35 @@
 
 + (instancetype)defaultConfig;
 
+/**
+ segmentBar背景色
+ */
 @property (nonatomic, strong) UIColor *segmentBarBackgroundColor;
+
+/**
+ Item颜色
+ */
 @property (nonatomic, strong) UIColor *itemNormalColor;
+
+/**
+ Item选中时颜色
+ */
 @property (nonatomic, strong) UIColor *itemSelectedColor;
+
+/**
+ 字体大小
+ */
 @property (nonatomic, strong) UIFont *font;
+
+/**
+ 指示器颜色，高度，额外宽度
+ */
 @property (nonatomic, strong) UIColor *indColor;
 @property (nonatomic, assign) CGFloat indHeight;
 @property (nonatomic, assign) CGFloat indExtraW;
-// 链式编程
+
+
+// 链式编程， 设置上述属性。
 @property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^itemNC)(UIColor *color);
 @property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^itemSC)(UIColor *color);
 @property (nonatomic, copy, readonly) LQQSegmentBarConfig *(^itemFont)(UIFont *font);

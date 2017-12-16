@@ -42,6 +42,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.segmentBarHeight = 40;
 }
 
 - (void)setUpWithItems:(NSArray<NSString *> *)items childVCs:(NSArray<UIViewController *> *)childVCs {
@@ -61,7 +62,7 @@
     // 分离布局
     if (self.segmentBar.superview == self.view) {
         self.contentView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
-        self.segmentBar.frame = CGRectMake(0, 60, self.view.width, 40);
+        self.segmentBar.frame = CGRectMake(0, 64, self.view.width, self.segmentBarHeight);
         CGFloat contentViewY = self.segmentBar.y + self.segmentBar.height;
         CGRect contentFrame = CGRectMake(0, contentViewY, self.view.width, self.view.height - contentViewY);
         self.contentView.frame = contentFrame;

@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface LQQViewController : UIViewController
+@interface LQQViewController : UITableViewController
 
 @end

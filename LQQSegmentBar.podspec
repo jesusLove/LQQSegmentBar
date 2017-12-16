@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LQQSegmentBar'
-  s.version          = '0.2.1'
+  s.version          = '0.1.0'
   s.summary          = 'LQQSegmentBar 选项卡控件'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 LQQSegmentBar, 简单易用的选项卡控件, 链式设置属性。
                        DESC
 
-  s.homepage         = 'https://gitee.com/QQL/LQQSegmentBar'
+  s.homepage         = 'https://github.com/jesusLove/LQQSegmentBar'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '85174695' => 'jesus_lqq@163.com' }
-  s.source           = { :git => 'https://gitee.com/QQL/LQQSegmentBar.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/jesusLove/LQQSegmentBar.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
