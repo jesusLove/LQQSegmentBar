@@ -11,18 +11,20 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Xcode 8.0 +
+
 ## Installation
 
 LQQSegmentBar is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```
 pod 'LQQSegmentBar'
 ```
 
 ## Author
 
-85174695, jesus_lqq@163.com
+851374695, jesus_lqq@163.com
 
 ## License
 
