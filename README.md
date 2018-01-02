@@ -1,9 +1,9 @@
 # LQQSegmentBar
 
-[![CI Status](http://img.shields.io/travis/85174695/LQQSegmentBar.svg?style=flat)](https://travis-ci.org/85174695/LQQSegmentBar)
+[![CI Status](https://img.shields.io/badge/build-pass-green.svg)](https://travis-ci.org/85174695/LQQSegmentBar)
 [![Version](https://img.shields.io/cocoapods/v/LQQSegmentBar.svg?style=flat)](http://cocoapods.org/pods/LQQSegmentBar)
-[![License](https://img.shields.io/cocoapods/l/LQQSegmentBar.svg?style=flat)](http://cocoapods.org/pods/LQQSegmentBar)
-[![Platform](https://img.shields.io/cocoapods/p/LQQSegmentBar.svg?style=flat)](http://cocoapods.org/pods/LQQSegmentBar)
+[![License](https://img.shields.io/badge/license-MIT-red.svg)](http://cocoapods.org/pods/LQQSegmentBar)
+[![Platform](https://img.shields.io/badge/platform-iOS-yellow.svg)](http://cocoapods.org/pods/LQQSegmentBar)
 
 ## Example
 
