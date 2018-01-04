@@ -18,13 +18,21 @@
 
 @interface LQQSegmentBar : UIView
 
+/**
+ 创建SegmentBar对象
+
+ @param frame Frame
+ @return 实例
+ */
 + (instancetype)segmentBarWithFrame: (CGRect)frame;
 
+// 要显示的字符数组
 @property (nonatomic, strong) NSArray <NSString*> * items;
-
+// 代理
 @property (nonatomic, weak) id <LQQSegementBarDelegate> delegate;
-
+// 被选中项
 @property (nonatomic, assign) NSInteger selectIndex;
 
+// 更新配置信息
 - (void)updateWithConfig:(void(^)(LQQSegmentBarConfig *config))configBlock;
 @end

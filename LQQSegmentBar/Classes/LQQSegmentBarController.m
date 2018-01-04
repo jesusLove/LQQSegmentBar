@@ -89,6 +89,7 @@
 }
 
 #pragma MARK - UIScrollViewDelegate
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     NSInteger index = self.contentView.contentOffset.x / self.contentView.width;
     self.segmentBar.selectIndex = index;

@@ -50,6 +50,7 @@
     [self.segmentBarVC setUpWithItems:items childVCs:@[vc1, vc2, vc3, vc4, vc5]];
     [self.segmentBarVC.segmentBar updateWithConfig:^(LQQSegmentBarConfig *config) {
         // 改变Bar样式
+        config.itemNC(UIColor.orangeColor).itemSC(UIColor.redColor);
     }];
 }
 
