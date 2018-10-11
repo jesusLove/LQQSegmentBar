@@ -85,8 +85,8 @@
         [self.itemBtns addObject:btn];
     }
     //手动刷新布局
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
+    [self setNeedsLayout]; // 有刷新标识
+    [self layoutIfNeeded]; // 检测s有没有刷新标识，有则立即刷新
 }
 
 #pragma mark - 懒加载

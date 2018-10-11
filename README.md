@@ -1,31 +1,24 @@
 # LQQSegmentBar
 
-[![CI Status](https://img.shields.io/badge/build-pass-green.svg)](https://travis-ci.org/85174695/LQQSegmentBar)
-[![Version](https://img.shields.io/cocoapods/v/LQQSegmentBar.svg?style=flat)](http://cocoapods.org/pods/LQQSegmentBar)
-[![License](https://img.shields.io/badge/license-MIT-red.svg)](http://cocoapods.org/pods/LQQSegmentBar)
-[![Platform](https://img.shields.io/badge/platform-iOS-yellow.svg)](http://cocoapods.org/pods/LQQSegmentBar)
+* Pod库的创建过程
+* 封装选项卡控件
+* 链式编程思想
 
-## Example
+# Pod库的创建过程
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+* `pod lib create [名称]` 例如：`pod lib create LQQSegmentBar`
+* 编写库的实现代码
+* 创建远程仓库并关联，配置podspec文件
+* 提交到远程仓库，`git add .`添加到暂存区；` git commit -m '注释'`添加到工作区；`git push origin master`推送到远程仓库
+* 打标签，`git tag -a xxx -m '注释'`标签名`xxx`,`git push --tags`推送标签远程仓库。
+* 验证`podspec`文件，本地验证`pod lib lint`，远程验证`pod spec lint`
+* 推送到远程索引库`pod repo push XXX xxx.podspec`，其中: XXX索引库名称需要之前添加过的，查看方式`pod repo`。
 
-## Requirements
+#  封装选项卡控件
 
-Xcode 8.0 +
+## 需求
 
-## Installation
-
-LQQSegmentBar is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```
-pod 'LQQSegmentBar'
-```
-
-## Author
-
-851374695, jesus_lqq@163.com
-
-## License
-
-LQQSegmentBar is available under the MIT license. See the LICENSE file for more info.
+* 外界传入字符串数组，生成对应的选项卡
+* 外界控制选项卡的背景颜色、选中颜色、指示器颜色等
+* 点击选项卡得到索引值
+* 滚动时选项卡联动
